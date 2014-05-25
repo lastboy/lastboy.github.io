@@ -1,0 +1,120 @@
+@import "lesshat.less";
+@import "base";
+
+#page {
+  font-size: 30px;
+  margin: 5px auto 0;
+  max-width: 600px;
+  font-size: 30px;
+  text-align: center;
+  top: 50px;
+}
+
+#next-page {
+  margin-bottom: 0px;
+
+  width: 76px;
+  height: 76px;
+  position: fixed;
+  display: block;
+  bottom: 0px;
+  left: 50%;
+  z-index: 10;
+
+  border-radius: 50%;
+  background: url(./../images/sprite.png) 14px 24px no-repeat rgba(0, 0, 0, .85);
+  .animation(bounce 1.2s linear infinite);
+  opacity: .7;
+
+}
+
+#page {
+
+  .lines {
+    li {
+      font-family: "Comic Sans MS", "Trebuchet MS", Arial;
+      position: relative;
+      top: 30px;
+      font-size: 31px;
+      list-style: none;
+      line-height: 1.2;
+      letter-spacing: 0.2px;
+      margin: 2px auto;
+      height: 30px;
+      width: 100%;
+      left: auto;
+      text-shadow: 0 1px 0 #ccc;
+      color: #4d4d4d;
+      padding: 5px;
+
+      .transition(all 0.2s ease-in);
+    }
+
+    li a.link {
+      text-decoration: none;
+      color: #007dba;
+    }
+
+    li a.link:hover {
+      text-decoration: none;
+      color: #004465;
+    }
+
+    li:hover {
+      font-size: 33px;
+      color:#007dba;
+      list-style: circle;
+    }
+
+    li div.standout {
+      .transition(all 1.2s ease-in);
+      text-shadow: 0px 1px 1px #4d4d4d;
+      color: #e15517;
+      padding: 0 0 0 0;
+      opacity:0;
+      position:absolute;
+      top:20%;
+      font-size: 31px;
+    }
+
+    li div.standout:hover {
+      font-size: 31px;
+    }
+  }
+
+  h1#counter {
+
+    position: absolute;
+    left:20%;
+    top: 40%;
+
+    font:normal 100px "Comic Sans MS", "Trebuchet MS", Arial;;
+    color:#FFFFFF;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+  }
+}
+
+#page {
+  .logo {
+    img {
+      top: 15px;
+      height: 30px;
+      position: relative;
+      list-style: none;
+      margin: 2px auto;
+      width: 280px;
+      height: 110px;
+    }
+  }
+}
