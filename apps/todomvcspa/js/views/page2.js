@@ -1,6 +1,6 @@
 /*global define*/
 define([
-    '../.',
+    'jquery',
     'underscore',
     'backbone',
     'text!templates/page2.html',

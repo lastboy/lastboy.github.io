@@ -1,5 +1,5 @@
 define([
-    '../.',
+    'jquery',
     'underscore',
     'backbone',
     'text!templates/page4.html',

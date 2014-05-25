@@ -1,6 +1,6 @@
 /*global define*/
 define([
-	'../.',
+	'underscore',
 	'backbone',
     'backboneLocalstorage'
 

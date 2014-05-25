@@ -1,5 +1,5 @@
 define([
-    '../.',
+    'jquery',
     'backbone',
     'routers/uirouter',
     'models/navbar',

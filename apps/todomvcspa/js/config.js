@@ -38,7 +38,7 @@ require.config({
 });
 
 require([
-	'.',
+	'backbone',
     'routers/router'
 ], function (Backbone, Workspace) {
 
