@@ -9,7 +9,7 @@
      module.exports = factory(require("underscore"), require("backbone"));
    } else if (typeof define === "function" && define.amd) {
       // AMD. Register as an anonymous module.
-      define([".","backbone"], function(_, Backbone) {
+      define(["underscore","backbone"], function(_, Backbone) {
         // Use global variables if the locals are undefined.
         return factory(_ || root._, Backbone || root.Backbone);
       });
