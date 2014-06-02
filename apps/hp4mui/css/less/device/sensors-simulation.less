@@ -1,0 +1,64 @@
+.sensors-simulation {
+
+  .settings() {
+    margin: 180px 120px 0 0;
+    float: left;
+  }
+
+  width: 100%;
+  position:relative;
+  left: 21%;
+
+  #restart {
+    .settings();
+    .image {
+      .config(78, 85, -392, 0);
+      .text {
+        position: relative;
+        top: 90px;
+        left: 10px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+
+  #install {
+    .settings();
+    .image {
+      .config(78, 85, -476, 0);
+      .text {
+        position: relative;
+        top: 90px;
+        left: 10px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+
+  #uninstall {
+    margin: 180px 0 0 28px;
+    float: left;
+    .image {
+      .config(78, 85, -561, 0);
+      .text {
+        position: relative;
+        top: 90px;
+        left: 10px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+
+}

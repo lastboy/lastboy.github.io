@@ -1,0 +1,101 @@
+.devices-vital {
+
+  .settings() {
+    margin: 180px 120px 0 0;
+    float: left;
+  }
+
+  width: 100%;
+
+  #cpu {
+    .settings();
+    .image {
+      .config(78, 85, 0, 0);
+
+      .text {
+        position: relative;
+        top: 90px;
+        left: 17px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+  #memory {
+    .settings();
+    .image {
+      .config(78, 85, -78, 0);
+
+      .text {
+        position: relative;
+        top: 90px;
+        left: 4px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+
+  #log {
+    .settings();
+    .image {
+      .config(78, 85, -156, 0);
+
+      .text {
+        position: relative;
+        top: 90px;
+        left: 23px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+
+  #baterry {
+    .settings();
+    .image {
+      .config(78, 85, -234, 0);
+
+      .text {
+        position: relative;
+        top: 90px;
+        left: 10px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+
+  #screenshots {
+    margin: 180px 0 0 28px;
+    float: left;
+    .image {
+      .config(78, 85, -312, 0);
+
+      .text {
+        position: relative;
+        top: 90px;
+        left: -11px;
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 20px;
+      }
+    }
+    .toggle {
+      .flip-toggle();
+    }
+  }
+
+}

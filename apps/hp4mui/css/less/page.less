@@ -1,0 +1,104 @@
+@import "lesshat.less";
+@import "base.less";
+@import "device/devices.less";
+@import "device/device-vital.less";
+@import "device/sensors-simulation.less";
+@import "page0.less";
+@import "controls/counter.less";
+@import "controls/petek.less";
+@import "controls/tab.less";
+@import "controls/flip-toggle.less";
+
+.config(@width, @height, @top, @left) {
+  width: unit(@width, px);
+  height: unit(@height, px);
+  background: url(./../images/config.png) unit(@top, px) unit(@left, px) no-repeat transparent;
+}
+
+#next-page {
+  margin-bottom: 0px;
+
+  width: 46px;
+  height: 46px;
+  position: fixed;
+  display: block;
+  bottom: 0px;
+  left: 90%;
+  z-index: 10;
+
+  border-radius: 50%;
+  background: url(./../images/sprite.png) 0px 6px no-repeat #ffffff;
+  .animation(bounce 1s linear infinite);
+  border: 2px solid lightgray;
+  opacity: 1;
+
+}
+
+#page {
+  font-size: 30px;
+  margin: 0 auto 0;
+  max-width: 950px;
+  min-width: 950px;
+  font-size: 30px;
+  text-align: left;
+
+  .title {
+    padding: 0;
+    margin: 116px 0 0 0;
+    list-style: none;
+    font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+
+    li {
+      padding: 0px 0px 10px 0px;
+    }
+
+    .header {
+      color: #000000;
+      font-size: 26px;
+      line-height: 133%;
+
+      .tiles-current {
+        padding: 0 0 0 18px;
+        font-size: 26px;
+        line-height: 73%;
+        color: #777776
+      }
+      .tiles-total {
+        font-size: 20px;
+        line-height: 73%;
+        color: #777776
+      }
+    }
+
+  }
+
+  #content {
+    width: 100%;
+    height: 100%;
+  }
+
+  h1#counter {
+
+    position: absolute;
+    left: 20%;
+    top: 40%;
+
+    font: normal 100px "HPSimplified", "Trebuchet MS", Arial;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+  }
+}
+
+#page {
+  .logo {
+    img {
+      top: 15px;
+      height: 30px;
+      position: relative;
+      list-style: none;
+      margin: 2px auto;
+      width: 280px;
+      height: 110px;
+    }
+  }
+}

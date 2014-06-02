@@ -1,0 +1,99 @@
+.counter-circle(@bgcolor, @color, @top, @text-top-pos) {
+
+  .counter-wrapper {
+    z-index: 1;
+    top: 0px;
+    position: absolute;
+    left: 44%;
+
+    .counter-bg {
+
+    }
+
+    .counter {
+      .transition(all .5s ease-in-out);
+      opacity: 0;
+      background-color: @bgcolor;
+      width: 115px;
+      height: 115px;
+      color: #ffffff;
+      top: unit(@top, px);
+      position: absolute;
+
+      .border-radius(50%);
+      .box-shadow(0px 5px 0px 0px rgba(0, 0, 0, 0.05));
+
+      .text {
+        font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+        font-size: 75px;
+        font-weight: normal;
+        color: #ffffff;
+        position: absolute;
+        left: 39px;
+        top: unit(@text-top-pos, px);
+        z-index: 100;
+      }
+
+    }
+
+    .counter:after {
+      background-color: @color;
+      width: 115px;
+      height: 115px;
+      color: #ffffff;
+      top: 0px;
+      position: absolute;
+
+      width: 115px;
+      height: 55px;
+      color: #ffffff;
+      top: 1px;
+      position: absolute;
+      .border-radius(115px 115px 0 0 );
+      content: "";
+
+    }
+
+  }
+
+}
+
+.top-counter() {
+  .counter-circle(#8bb65c, #779c4f, 25, 34);
+}
+
+
+.bottom-counter() {
+  .counter-circle(#d6d6d6, #cfcfcf, -56, 14);
+}
+
+.counter-bg-base(@image-index, @width, @height, @top, @left) {
+  background-image: url("./../images/page@{image-index}bg.png");
+  width: unit(@width, px);
+  height: unit(@height, px);
+  position: absolute;
+  left: unit(@left, px);
+  top: unit(@top, px);
+}
+
+.counter-bg-page1-0{
+  .counter-bg-base(0, 259, 158, 2, -211);
+
+}
+
+.counter-bg-page1-1 {
+  .counter-bg-base(1, 356, 276, -109, -122);
+}
+
+.counter-bg-page2-0{
+  .counter-bg-base(3, 356, 296, -118, -149);
+
+}
+
+.counter-bg-page2-1 {
+  .counter-bg-base(2, 301, 159, -102, -84);
+}
+
+.counter-bg-page3-0 {
+  .counter-bg-base(2, 301, 159, -27, -104);
+}

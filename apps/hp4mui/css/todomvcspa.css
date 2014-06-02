@@ -1,0 +1,1382 @@
+/*
+ * HP fonts imports
+ */
+@font-face {
+  font-family: 'HPSimplified';
+  src: url('fonts/hpsimplified-regular-eot.eot');
+  src: url('fonts/hpsimplified-regular-eot.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified-regular-woff.woff') format('woff'), url('fonts/hpsimplified-regular-ttf.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HPSimplifiedBold';
+  src: url('fonts/hpsimplified-bold-eot.eot');
+  src: url('fonts/hpsimplified-bold-eot.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified-bold-woff.woff') format('woff'), url('fonts/hpsimplified-bold-ttf.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HPSimplifiedBoldItalic';
+  src: url('fonts/hpsimplified-bolditalic-eot.eot');
+  src: url('fonts/hpsimplified-bolditalic-eot.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified-bolditalic-woff.woff') format('woff'), url('fonts/hpsimplified-bolditalic-ttf.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HPSimplifiedItalic';
+  src: url('fonts/hpsimplified-italic-eot.eot');
+  src: url('fonts/hpsimplified-italic-eot.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified-italic-woff.woff') format('woff'), url('fonts/hpsimplified-italic-ttf.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HPSimplifiedLight';
+  src: url('fonts/hpsimplified-light-eot.eot');
+  src: url('fonts/hpsimplified-light-eot.eot?#iefix') format('embedded-opentype'), url('fonts/hpsimplified-light-woff.woff') format('woff'), url('fonts/hpsimplified-light-ttf.ttf') format('truetype');
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes bounce{ 0%{ bottom:75px; } 40%{ bottom:55px; } 100%{ bottom:75px; }}
+@-moz-keyframes bounce{ 0%{ bottom:75px; } 40%{ bottom:55px; } 100%{ bottom:75px; }}
+@-o-keyframes bounce{ 0%{ bottom:75px; } 40%{ bottom:55px; } 100%{ bottom:75px; }}
+@keyframes bounce{ 0%{ bottom:75px; } 40%{ bottom:55px; } 100%{ bottom:75px; };
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "HPSimplified", "Trebuchet MS", Arial;
+  overflow: hidden;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  position: absolute;
+  background-color: #ebebeb;
+}
+#container .counter-wrapper {
+  z-index: 1;
+  top: 0px;
+  position: absolute;
+  left: 44%;
+}
+#container .counter-wrapper .counter {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background-color: #8bb65c;
+  width: 115px;
+  height: 115px;
+  color: #ffffff;
+  top: 25px;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.05);
+}
+#container .counter-wrapper .counter .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 75px;
+  font-weight: normal;
+  color: #ffffff;
+  position: absolute;
+  left: 39px;
+  top: 34px;
+  z-index: 100;
+}
+#container .counter-wrapper .counter:after {
+  background-color: #779c4f;
+  height: 115px;
+  top: 0px;
+  width: 115px;
+  height: 55px;
+  color: #ffffff;
+  top: 1px;
+  position: absolute;
+  -webkit-border-radius: 115px 115px 0px 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 115px 115px 0px 0px;
+  -moz-background-clip: padding;
+  border-radius: 115px 115px 0px 0px;
+  background-clip: padding-box;
+  content: "";
+}
+#container #workspace {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#container #nav-bullets {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  height: 76px;
+  margin-top: -38px;
+  z-index: 100;
+  list-style: none;
+}
+#container #nav-bullets li.active {
+  background-color: transparent;
+  opacity: 1;
+}
+#container #nav-bullets li:active,
+#container #nav-bullets li:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+#container #nav-bullets span:hover {
+  opacity: 1;
+}
+#container #nav-bullets li {
+  position: relative;
+  margin-bottom: 12px;
+  width: 10px;
+  height: 10px;
+  background-color: #656565;
+  border: 1px solid #656565;
+  opacity: 0.3;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#container #nav-bullets li span {
+  position: absolute;
+  text-align: right;
+  top: -5px;
+  right: 0;
+  padding-right: 20px;
+  font-size: 13px;
+  color: #a2a2a2;
+  opacity: 0;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+#container #navbar {
+  position: fixed;
+  background-color: #ffffff;
+  position: absolute;
+  height: 56px;
+  width: 100%;
+  top: -1px;
+  z-index: 100000;
+  -webkit-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.05);
+}
+#container #navbar div {
+  position: absolute;
+  top: 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  font-family: "HPSimplified", "Trebuchet MS", Arial;
+  font-weight: bold;
+  font-size: 20px;
+  color: #434343;
+  width: 100%;
+  height: 100%;
+}
+#container #navbar div .text {
+  position: absolute;
+  left: 55px;
+  top: 21px;
+  white-space: nowrap;
+  width: 100px;
+  font-family: "HPSimplified", "Trebuchet MS", Arial;
+  font-size: 16px;
+  font-weight: normal;
+  color: #434343;
+}
+#container #navbar div .image {
+  position: absolute;
+  left: 23px;
+  top: 15px;
+  background: url(../images/sprite.png) 0px 0px no-repeat;
+  width: 30px;
+  height: 30px;
+  border: 0px;
+}
+#container footer {
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+}
+#container footer .counter-wrapper {
+  z-index: 1;
+  top: 0px;
+  position: absolute;
+  left: 44%;
+}
+#container footer .counter-wrapper .counter {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background-color: #d6d6d6;
+  width: 115px;
+  height: 115px;
+  color: #ffffff;
+  top: -56px;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.05);
+}
+#container footer .counter-wrapper .counter .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 75px;
+  font-weight: normal;
+  color: #ffffff;
+  position: absolute;
+  left: 39px;
+  top: 14px;
+  z-index: 100;
+}
+#container footer .counter-wrapper .counter:after {
+  background-color: #cfcfcf;
+  height: 115px;
+  top: 0px;
+  width: 115px;
+  height: 55px;
+  color: #ffffff;
+  top: 1px;
+  position: absolute;
+  -webkit-border-radius: 115px 115px 0px 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 115px 115px 0px 0px;
+  -moz-background-clip: padding;
+  border-radius: 115px 115px 0px 0px;
+  background-clip: padding-box;
+  content: "";
+}
+.lg-device {
+  width: 55px;
+  height: 25px;
+  background: url(../images/sprite.png) -2px -32px no-repeat transparent;
+}
+.apple-device,
+.ios-device {
+  width: 22px;
+  height: 25px;
+  background: url(../images/sprite.png) -63px -32px no-repeat transparent;
+}
+.android-device {
+  width: 22px;
+  height: 25px;
+  background: url(../images/sprite.png) -91px -32px no-repeat transparent;
+}
+.samsung-device {
+  width: 53px;
+  height: 25px;
+  background: url(../images/sprite.png) -46px -32px no-repeat transparent;
+}
+.windows-device {
+  width: 23px;
+  height: 25px;
+  background: url(../images/sprite.png) -120px -32px no-repeat transparent;
+}
+.devices-vital {
+  width: 100%;
+}
+.devices-vital #cpu {
+  margin: 180px 120px 0 0;
+  float: left;
+}
+.devices-vital #cpu .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) 0px 0px no-repeat transparent;
+}
+.devices-vital #cpu .image .text {
+  position: relative;
+  top: 90px;
+  left: 17px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.devices-vital #cpu .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.devices-vital #cpu .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #cpu .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #cpu .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #cpu .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.devices-vital #cpu .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.devices-vital #cpu .toggle .text-off {
+  left: 40px;
+}
+.devices-vital #cpu .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+.devices-vital #memory {
+  margin: 180px 120px 0 0;
+  float: left;
+}
+.devices-vital #memory .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) -78px 0px no-repeat transparent;
+}
+.devices-vital #memory .image .text {
+  position: relative;
+  top: 90px;
+  left: 4px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.devices-vital #memory .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.devices-vital #memory .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #memory .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #memory .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #memory .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.devices-vital #memory .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.devices-vital #memory .toggle .text-off {
+  left: 40px;
+}
+.devices-vital #memory .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+.devices-vital #log {
+  margin: 180px 120px 0 0;
+  float: left;
+}
+.devices-vital #log .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) -156px 0px no-repeat transparent;
+}
+.devices-vital #log .image .text {
+  position: relative;
+  top: 90px;
+  left: 23px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.devices-vital #log .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.devices-vital #log .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #log .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #log .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #log .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.devices-vital #log .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.devices-vital #log .toggle .text-off {
+  left: 40px;
+}
+.devices-vital #log .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+.devices-vital #baterry {
+  margin: 180px 120px 0 0;
+  float: left;
+}
+.devices-vital #baterry .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) -234px 0px no-repeat transparent;
+}
+.devices-vital #baterry .image .text {
+  position: relative;
+  top: 90px;
+  left: 10px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.devices-vital #baterry .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.devices-vital #baterry .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #baterry .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #baterry .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #baterry .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.devices-vital #baterry .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.devices-vital #baterry .toggle .text-off {
+  left: 40px;
+}
+.devices-vital #baterry .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+.devices-vital #screenshots {
+  margin: 180px 0 0 28px;
+  float: left;
+}
+.devices-vital #screenshots .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) -312px 0px no-repeat transparent;
+}
+.devices-vital #screenshots .image .text {
+  position: relative;
+  top: 90px;
+  left: -11px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.devices-vital #screenshots .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.devices-vital #screenshots .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #screenshots .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #screenshots .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.devices-vital #screenshots .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.devices-vital #screenshots .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.devices-vital #screenshots .toggle .text-off {
+  left: 40px;
+}
+.devices-vital #screenshots .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+.sensors-simulation {
+  width: 100%;
+  position: relative;
+  left: 21%;
+}
+.sensors-simulation #restart {
+  margin: 180px 120px 0 0;
+  float: left;
+}
+.sensors-simulation #restart .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) -392px 0px no-repeat transparent;
+}
+.sensors-simulation #restart .image .text {
+  position: relative;
+  top: 90px;
+  left: 10px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.sensors-simulation #restart .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.sensors-simulation #restart .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #restart .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #restart .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #restart .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.sensors-simulation #restart .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.sensors-simulation #restart .toggle .text-off {
+  left: 40px;
+}
+.sensors-simulation #restart .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+.sensors-simulation #install {
+  margin: 180px 120px 0 0;
+  float: left;
+}
+.sensors-simulation #install .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) -476px 0px no-repeat transparent;
+}
+.sensors-simulation #install .image .text {
+  position: relative;
+  top: 90px;
+  left: 10px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.sensors-simulation #install .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.sensors-simulation #install .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #install .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #install .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #install .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.sensors-simulation #install .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.sensors-simulation #install .toggle .text-off {
+  left: 40px;
+}
+.sensors-simulation #install .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+.sensors-simulation #uninstall {
+  margin: 180px 0 0 28px;
+  float: left;
+}
+.sensors-simulation #uninstall .image {
+  width: 78px;
+  height: 85px;
+  background: url(../images/config.png) -561px 0px no-repeat transparent;
+}
+.sensors-simulation #uninstall .image .text {
+  position: relative;
+  top: 90px;
+  left: 10px;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 20px;
+}
+.sensors-simulation #uninstall .toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.sensors-simulation #uninstall .toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #uninstall .toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #uninstall .toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.sensors-simulation #uninstall .toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.sensors-simulation #uninstall .toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.sensors-simulation #uninstall .toggle .text-off {
+  left: 40px;
+}
+.sensors-simulation #uninstall .toggle .circle-off {
+  background-color: #c1c1c0;
+}
+#page .splash-header {
+  margin: 0px;
+  padding: 0px;
+}
+#page .splash-header li {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  list-style: none;
+  text-align: center;
+}
+#page .splash-header .text1 {
+  font-size: 50px;
+  color: #000000;
+  padding-top: 80px;
+}
+#page .splash-header .text2 {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  font-size: 30px;
+  color: #5a5a5a;
+  padding-bottom: 20px;
+}
+#page .splash .circle {
+  /* .border-radius(50%);
+      background-color: #8bb65c;*/
+  height: 548px;
+  width: 545px;
+  margin: 20px auto auto;
+  background-image: url(../images/splash.png);
+}
+.counter-bg-page1-0 {
+  background-image: url("../images/page0bg.png");
+  width: 259px;
+  height: 158px;
+  position: absolute;
+  left: -211px;
+  top: 2px;
+}
+.counter-bg-page1-1 {
+  background-image: url("../images/page1bg.png");
+  width: 356px;
+  height: 276px;
+  position: absolute;
+  left: -122px;
+  top: -109px;
+}
+.counter-bg-page2-0 {
+  background-image: url("../images/page3bg.png");
+  width: 356px;
+  height: 296px;
+  position: absolute;
+  left: -149px;
+  top: -118px;
+}
+.counter-bg-page2-1 {
+  background-image: url("../images/page2bg.png");
+  width: 301px;
+  height: 159px;
+  position: absolute;
+  left: -84px;
+  top: -102px;
+}
+.counter-bg-page3-0 {
+  background-image: url("../images/page2bg.png");
+  width: 301px;
+  height: 159px;
+  position: absolute;
+  left: -104px;
+  top: -27px;
+}
+.petek {
+  position: relative;
+  text-decoration: none;
+  float: left;
+  width: 136px;
+  height: 295px;
+  border: 1px solid #e5eae9;
+  -webkit-border-radius: 0px 10px 0px 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 10px 0px 10px;
+  -moz-background-clip: padding;
+  border-radius: 0px 10px 0px 10px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 8px 0px 0px #dedede;
+  -moz-box-shadow: 0px 8px 0px 0px #dedede;
+  box-shadow: 0px 8px 0px 0px #dedede;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  background-color: #ffffff;
+  padding: 0px 37px 0px 37px;
+  margin: 10px 20px 10px 0px;
+}
+.petek .info-icon {
+  width: 23px;
+  height: 23px;
+  float: right;
+  margin: 6px -31px 0px 0px;
+  background: url(../images/sprite.png) -31px 0px no-repeat transparent;
+}
+.petek .icon {
+  width: 116px;
+  height: 116px;
+  margin: 20px 10px 0 10px;
+  border: none;
+  outline: none;
+}
+.petek .details {
+  padding: 0px;
+  background-color: transparent;
+  margin: auto auto;
+}
+.petek .details ul {
+  padding: 0;
+  margin: 0;
+}
+.petek .details ul li {
+  list-style: none;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+}
+.petek .details .new-app {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 133%;
+}
+.petek .details .dtitle {
+  color: #000000;
+  font-size: 18px;
+  line-height: 133%;
+  padding: 14px 0 0 0;
+}
+.petek .details .ddescription {
+  color: #6b6b6b;
+  font-size: 14px;
+  line-height: 120%;
+  padding: 18px 0 0 0;
+}
+.petek .details .dversion {
+  color: #0096d6;
+  font-size: 14px;
+  line-height: 120%;
+  padding: 23px 0 0 0;
+}
+.petek-selected,
+.petek:hover,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+._tab {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto auto;
+}
+._tab ._tabcontainer {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+._tab ._tabcontainer ._tabitem {
+  float: left;
+  width: 30%;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #000000;
+  font-size: 22px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+._tab ._tabcontainer .indicator {
+  background-color: #0096d6;
+  height: 4px;
+  width: 0px;
+  position: relative;
+  top: 28px;
+  opacity: 1;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+._tab ._tabcontent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+._tab ._tabcontent ._tabcontentitem {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+._tab ._tabcontent ._tabcontentitem .cell {
+  float: left;
+  width: 78px;
+  height: 85px;
+}
+.flip-toggle {
+  position: relative;
+  margin: 55px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000000000000;
+}
+.flip-toggle .left-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 50% 0px 0px 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50% 0px 0px 50%;
+  -moz-background-clip: padding;
+  border-radius: 50% 0px 0px 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.flip-toggle .right-circle {
+  float: left;
+  width: 37px;
+  height: 32px;
+  background-color: #8bb65c;
+  -webkit-border-radius: 0px 50% 50% 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px 50% 50% 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px 50% 50% 0px;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.flip-toggle .switch-circle {
+  position: relative;
+  top: -3px;
+  left: 39px;
+  height: 34px;
+  width: 34px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+.flip-toggle .text {
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+  left: 14px;
+}
+.flip-toggle .switch-off {
+  top: -3px;
+  left: 1px;
+}
+.flip-toggle .text-off {
+  left: 40px;
+}
+.flip-toggle .circle-off {
+  background-color: #c1c1c0;
+}
+#next-page {
+  margin-bottom: 0px;
+  width: 46px;
+  height: 46px;
+  position: fixed;
+  display: block;
+  bottom: 0px;
+  left: 90%;
+  z-index: 10;
+  border-radius: 50%;
+  background: url(../images/sprite.png) 0px 6px no-repeat #ffffff;
+  -webkit-animation: bounce 1s linear infinite;
+  -moz-animation: bounce 1s linear infinite;
+  -o-animation: bounce 1s linear infinite;
+  animation: bounce 1s linear infinite;
+  border: 2px solid lightgray;
+  opacity: 1;
+}
+#page {
+  margin: 0 auto 0;
+  max-width: 950px;
+  min-width: 950px;
+  font-size: 30px;
+  text-align: left;
+}
+#page .title {
+  padding: 0;
+  margin: 116px 0 0 0;
+  list-style: none;
+  font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+}
+#page .title li {
+  padding: 0px 0px 10px 0px;
+}
+#page .title .header {
+  color: #000000;
+  font-size: 26px;
+  line-height: 133%;
+}
+#page .title .header .tiles-current {
+  padding: 0 0 0 18px;
+  font-size: 26px;
+  line-height: 73%;
+  color: #777776;
+}
+#page .title .header .tiles-total {
+  font-size: 20px;
+  line-height: 73%;
+  color: #777776;
+}
+#page #content {
+  width: 100%;
+  height: 100%;
+}
+#page h1#counter {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  font: normal 100px "HPSimplified", "Trebuchet MS", Arial;
+  color: #FFFFFF;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+#page .logo img {
+  top: 15px;
+  height: 30px;
+  position: relative;
+  list-style: none;
+  margin: 2px auto;
+  width: 280px;
+  height: 110px;
+}

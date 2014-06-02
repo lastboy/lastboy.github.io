@@ -1,0 +1,60 @@
+._tab {
+
+  width: 100%;
+  height: 100%;
+  margin: 0 auto auto;
+
+  ._tabcontainer {
+
+    height: 50px;
+    width: 100%;
+    text-align: center;
+
+    ._tabitem {
+      float:left;
+      width: 30%;
+      font-family: "HPSimplifiedLight", "Trebuchet MS", Arial;
+      color: #000000;
+      font-size: 22px;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .indicator {
+      background-color: #0096d6;
+      height: 4px;
+      width: 0px;
+      position:relative;
+      top: 28px;
+      opacity: 1;
+
+      .transition(all .1s ease-in);
+    }
+  }
+
+  ._tabcontent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    ._tabcontentitem {
+      opacity: 0;
+      position: absolute;
+      top:0px;
+      left:0px;
+      width: 100%;
+      height: 100%;
+      .transition(opacity .3s ease-in);
+
+      .cell {
+
+        float:left;
+        width: 78px;
+        height: 85px;
+      }
+    }
+
+  }
+
+
+}
