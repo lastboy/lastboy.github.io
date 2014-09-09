@@ -1,0 +1,11 @@
+<nav>
+    <div id="menu">
+        <ul>
+            <li ng-repeat="page in pages" ><a href="javascript:void(0)" scroll-to="{{page.name}}">{{page['display-name']}}</a></li>     
+        </ul>        
+    </div>
+
+    <label id="menu-options">{{selectedSection.name}}</label>
+</nav>
+
+<generatelt id="{{page.name}}" type="{{page.type}}" templateUrl="{{page['template-url']}}"  ng-repeat="page in pages" ></generatelt>

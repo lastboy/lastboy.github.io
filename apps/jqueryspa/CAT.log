@@ -1,0 +1,14 @@
+[Thu Sep 04 2014 11:14:26 GMT+0300 (IDT)] INFO 
+
+[CAT] Initial LOG -----------------------------------------------------------------------
+[Thu Sep 04 2014 11:14:26 GMT+0300 (IDT)] INFO [CAT] Initial CAT process: 5958
+[Thu Sep 04 2014 11:14:27 GMT+0300 (IDT)] DEBUG [CAT] Initial, current location: /home/arik/dev/projects/lastboy/jqueryspa
+[Thu Sep 04 2014 11:14:27 GMT+0300 (IDT)] DEBUG [CAT] Initial, command line arguments: {"argv":{"remain":[],"cooked":[],"original":[]},"home":{"path":"/home/arik/dev/projects/lastboy/catjs","working":{"path":"/home/arik/dev/projects/lastboy/jqueryspa"}}}
+[Thu Sep 04 2014 11:14:27 GMT+0300 (IDT)] INFO watch: false kill: -1 process: 5958
+[Thu Sep 04 2014 11:14:36 GMT+0300 (IDT)] INFO 
+
+[CAT] Initial LOG -----------------------------------------------------------------------
+[Thu Sep 04 2014 11:14:36 GMT+0300 (IDT)] INFO [CAT] Initial CAT process: 5973
+[Thu Sep 04 2014 11:14:36 GMT+0300 (IDT)] DEBUG [CAT] Initial, current location: /home/arik/dev/projects/lastboy/jqueryspa
+[Thu Sep 04 2014 11:14:36 GMT+0300 (IDT)] DEBUG [CAT] Initial, command line arguments: {"init":"cat","argv":{"remain":[],"cooked":["--init","cat"],"original":["-i"]},"home":{"path":"/home/arik/dev/projects/lastboy/catjs","working":{"path":"/home/arik/dev/projects/lastboy/jqueryspa"}}}
+[Thu Sep 04 2014 11:14:36 GMT+0300 (IDT)] INFO watch: false kill: -1 process: 5973
