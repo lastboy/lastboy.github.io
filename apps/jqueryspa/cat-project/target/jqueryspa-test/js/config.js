@@ -30,7 +30,7 @@ require.config({
 *//**
  *  catjs require configuration - for additional require config use your application's 
  */
-require.config({"shim":{"catjs":{"exports":"_cat","deps":["chai"]},"catsrc":{"deps":["cat"]}},"paths":{"chai":"cat/lib/chai","jspath":"cat/lib/jspath","tmr":"cat/lib/tmr","cat":"cat/lib/cat","catsrc":"cat/lib/cat.src"}});
+require.config({"shim":{"catjs":{"exports":"_cat","deps":["chai"]},"catsrc":{"deps":["cat"]}},"paths":{"chai":"/apps/jqueryspa/cat-project/target/jqueryspa-test/cat/lib/chai","jspath":"/apps/jqueryspa/cat-project/target/jqueryspa-test/cat/lib/jspath","tmr":"/apps/jqueryspa/cat-project/target/jqueryspa-test/cat/lib/tmr","cat":"/apps/jqueryspa/cat-project/target/jqueryspa-test/cat/lib/cat","catsrc":"/apps/jqueryspa/cat-project/target/jqueryspa-test/cat/lib/cat.src"}});
 require(["chai","jspath","tmr","cat","catsrc"], function(chai,jspath,tmr,cat,catsrc) {
 
     if (typeof chai !== "undefined") {
@@ -39,7 +39,7 @@ require(["chai","jspath","tmr","cat","catsrc"], function(chai,jspath,tmr,cat,cat
     if (typeof jspath !== "undefined") {
         window["JSPath"] = jspath;
     }
-    _cat.utils.Loader.requires(["cat/lib/cat.css"])
+    _cat.utils.Loader.requires(["/apps/jqueryspa/cat-project/target/jqueryspa-test/cat/lib/cat.css"])
 
 });
 
