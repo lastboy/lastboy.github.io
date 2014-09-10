@@ -1,0 +1,30 @@
+[
+    {
+        "name": "home",
+        "display-name": "Home",
+        "template-url": "pages/home.html",
+        "type": "header",
+        "active":false
+    },
+    {
+        "name": "howto",
+        "display-name": "How To",
+        "template-url": "pages/howto.html",
+        "type": "section",
+        "active":false
+    },    
+    {
+        "name": "credits",
+        "display-name": "Credits",
+        "template-url": "pages/credits.html",
+        "type": "section",
+        "active":false
+    },
+    {
+        "name": "about",
+        "display-name": "About",
+        "template-url": "pages/about.html",
+        "type": "section",
+        "active": false
+    }
+]
