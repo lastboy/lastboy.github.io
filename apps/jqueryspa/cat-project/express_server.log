@@ -19782,3 +19782,509 @@
 
 2014-09-09T07:05:50.632Z - info: [90mGET /assert?testName=End&scenario=undefined&message=End&error=&status=End&reports=console&name=jqueryspa-test&type=test&hasPhantom=false&id=a81df58a-7e29-70ff-accc-2ccd04dba079&cache=Tue,%2009%20Sep%202014%2007:05:50%20GMT [32m200 [90m1ms - 62b[0m
 
+2014-09-10T20:50:06.212Z - info: [90mGET / [33m404 [90m3ms[0m
+
+2014-09-10T20:50:20.563Z - info: [90mGET /app.html [32m200 [90m3ms - 1.53kb[0m
+
+2014-09-10T20:50:20.644Z - info: [90mGET /css/jqueryspa.css [32m200 [90m4ms - 10.05kb[0m
+
+2014-09-10T20:50:20.645Z - info: [90mGET /bower_components/requirejs/require.js [32m200 [90m4ms - 81.14kb[0m
+
+2014-09-10T20:50:20.730Z - info: [90mGET /js/config.js [32m200 [90m2ms - 1.63kb[0m
+
+2014-09-10T20:50:20.830Z - info: [90mGET /cat/lib/chai.js [32m200 [90m12ms - 150.57kb[0m
+
+2014-09-10T20:50:20.838Z - info: [90mGET /cat/lib/jspath.js [32m200 [90m18ms - 12.19kb[0m
+
+2014-09-10T20:50:20.838Z - info: [90mGET /cat/lib/tmr.js [32m200 [90m16ms - 38.22kb[0m
+
+2014-09-10T20:50:20.839Z - info: [90mGET /js/app.js [32m200 [90m15ms - 255b[0m
+
+2014-09-10T20:50:20.839Z - info: [90mGET /js/config/router.js [32m200 [90m15ms - 615b[0m
+
+2014-09-10T20:50:20.839Z - info: [90mGET /cat/lib/cat.js [32m200 [90m16ms - 96.39kb[0m
+
+2014-09-10T20:50:20.839Z - info: [90mGET /js/directives/generatelt.js [32m200 [90m7ms - 2.61kb[0m
+
+2014-09-10T20:50:20.870Z - info: [90mGET /js/directives/scrollto.js [32m200 [90m4ms - 1.32kb[0m
+
+2014-09-10T20:50:20.871Z - info: [90mGET /js/controllers/app.js [32m200 [90m4ms - 1.78kb[0m
+
+2014-09-10T20:50:20.871Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [32m200 [90m5ms - 82.3kb[0m
+
+2014-09-10T20:50:20.905Z - info: [90mGET /app.htmlcat/config/testdata.json [33m404 [90m1ms[0m
+
+2014-09-10T20:50:20.910Z - info: [90mGET /app.htmlcat/config/cat.json [33m404 [90m0ms[0m
+
+2014-09-10T20:50:20.921Z - info: [90mGET /cat/lib/cat.src.js [32m200 [90m1ms - 7.69kb[0m
+
+2014-09-10T20:50:20.978Z - info: [90mGET /bower_components/angular/angular.js [32m200 [90m29ms - 759.52kb[0m
+
+2014-09-10T20:50:20.982Z - info: [90mGET /js/common/manager.js [32m200 [90m3ms - 6.24kb[0m
+
+2014-09-10T20:50:20.983Z - info: [90mGET /js/services/data.js [32m200 [90m3ms - 3.65kb[0m
+
+2014-09-10T20:50:20.998Z - info: [90mGET /cat/lib/cat.css [32m200 [90m1ms - 86.47kb[0m
+
+2014-09-10T20:50:21.052Z - info: [90mGET /bower_components/angular-route/angular-route.js [32m200 [90m1ms - 32.28kb[0m
+
+2014-09-10T20:50:21.104Z - info: [90mGET /templates/app.html [32m200 [90m1ms - 413b[0m
+
+2014-09-10T20:50:21.131Z - info: [90mGET /js/data/app.json [32m200 [90m1ms - 670b[0m
+
+2014-09-10T20:50:21.191Z - info: [90mGET /pages/home.html [32m200 [90m2ms - 907b[0m
+
+2014-09-10T20:50:21.193Z - info: [90mGET /pages/howto.html [32m200 [90m3ms - 525b[0m
+
+2014-09-10T20:50:21.196Z - info: [90mGET /pages/credits.html [32m200 [90m1ms - 875b[0m
+
+2014-09-10T20:50:21.237Z - info: [90mGET /pages/about.html [32m200 [90m1ms - 899b[0m
+
+2014-09-10T20:50:21.250Z - info: [90mGET /css/images/catjs_48.png [32m200 [90m3ms - 1.36kb[0m
+
+2014-09-10T20:50:21.250Z - info: [90mGET /css/images/jqueryconf_200.png [32m200 [90m2ms - 53.12kb[0m
+
+2014-09-10T20:50:21.277Z - info: [90mGET /css/images/todomvc.png [32m200 [90m3ms - 19.42kb[0m
+
+2014-09-10T20:50:21.278Z - info: [90mGET /css/images/todomvcnote.png [32m200 [90m3ms - 16.9kb[0m
+
+2014-09-10T20:50:21.278Z - info: [90mGET /css/images/title.png [32m200 [90m3ms - 37.75kb[0m
+
+2014-09-10T20:50:21.279Z - info: [90mGET /css/images/bullet_info_40.png [32m200 [90m1ms - 2.78kb[0m
+
+2014-09-10T20:50:21.360Z - info: [90mGET /css/images/bullet_info_32.png [32m200 [90m2ms - 2.04kb[0m
+
+2014-09-10T20:50:27.834Z - info: [90mGET /app.html [36m304 [90m1ms[0m
+
+2014-09-10T20:50:27.896Z - info: [90mGET /css/jqueryspa.css [36m304 [90m2ms[0m
+
+2014-09-10T20:50:27.896Z - info: [90mGET /bower_components/requirejs/require.js [36m304 [90m2ms[0m
+
+2014-09-10T20:50:27.968Z - info: [90mGET /js/config.js [36m304 [90m1ms[0m
+
+2014-09-10T20:50:27.968Z - info: [90mGET /favicon.ico [33m404 [90m1ms[0m
+
+2014-09-10T20:50:27.985Z - info: [90mGET /cat/lib/chai.js [36m304 [90m2ms[0m
+
+2014-09-10T20:50:27.987Z - info: [90mGET /cat/lib/jspath.js [36m304 [90m3ms[0m
+
+2014-09-10T20:50:27.998Z - info: [90mGET /cat/lib/tmr.js [36m304 [90m4ms[0m
+
+2014-09-10T20:50:27.998Z - info: [90mGET /cat/lib/cat.js [36m304 [90m4ms[0m
+
+2014-09-10T20:50:27.998Z - info: [90mGET /js/app.js [36m304 [90m4ms[0m
+
+2014-09-10T20:50:27.999Z - info: [90mGET /js/config/router.js [36m304 [90m5ms[0m
+
+2014-09-10T20:50:27.999Z - info: [90mGET /js/controllers/app.js [36m304 [90m4ms[0m
+
+2014-09-10T20:50:27.999Z - info: [90mGET /js/directives/generatelt.js [36m304 [90m3ms[0m
+
+2014-09-10T20:50:28.005Z - info: [90mGET /js/directives/scrollto.js [36m304 [90m0ms[0m
+
+2014-09-10T20:50:28.006Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [36m304 [90m0ms[0m
+
+2014-09-10T20:50:28.015Z - info: [90mGET /app.htmlcat/config/testdata.json [33m404 [90m0ms[0m
+
+2014-09-10T20:50:28.016Z - info: [90mGET /app.htmlcat/config/cat.json [33m404 [90m1ms[0m
+
+2014-09-10T20:50:28.024Z - info: [90mGET /cat/lib/cat.src.js [36m304 [90m0ms[0m
+
+2014-09-10T20:50:28.024Z - info: [90mGET /js/common/manager.js [36m304 [90m0ms[0m
+
+2014-09-10T20:50:28.025Z - info: [90mGET /js/services/data.js [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.038Z - info: [90mGET /bower_components/angular/angular.js [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.042Z - info: [90mGET /cat/lib/cat.css [36m304 [90m2ms[0m
+
+2014-09-10T20:50:28.048Z - info: [90mGET /bower_components/angular-route/angular-route.js [36m304 [90m0ms[0m
+
+2014-09-10T20:50:28.072Z - info: [90mGET /templates/app.html [36m304 [90m2ms[0m
+
+2014-09-10T20:50:28.086Z - info: [90mGET /js/data/app.json [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.105Z - info: [90mGET /pages/home.html [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.114Z - info: [90mGET /pages/howto.html [36m304 [90m0ms[0m
+
+2014-09-10T20:50:28.118Z - info: [90mGET /pages/credits.html [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.123Z - info: [90mGET /pages/about.html [36m304 [90m3ms[0m
+
+2014-09-10T20:50:28.132Z - info: [90mGET /css/images/title.png [36m304 [90m3ms[0m
+
+2014-09-10T20:50:28.133Z - info: [90mGET /css/images/catjs_48.png [36m304 [90m3ms[0m
+
+2014-09-10T20:50:28.136Z - info: [90mGET /css/images/jqueryconf_200.png [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.136Z - info: [90mGET /css/images/todomvc.png [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.138Z - info: [90mGET /css/images/todomvcnote.png [36m304 [90m2ms[0m
+
+2014-09-10T20:50:28.138Z - info: [90mGET /css/images/bullet_info_40.png [36m304 [90m1ms[0m
+
+2014-09-10T20:50:28.162Z - info: [90mGET /css/images/bullet_info_32.png [36m304 [90m1ms[0m
+
+2014-09-10T20:50:40.073Z - info: [90mGET /bower_components/jquery/dist/jquery.min.map [32m200 [90m1ms - 124.34kb[0m
+
+2014-09-10T20:52:11.621Z - info: [90mGET /app.html [32m200 [90m6ms - 1.53kb[0m
+
+2014-09-10T20:52:11.639Z - info: [90mGET /bower_components/requirejs/require.js [32m200 [90m2ms - 81.14kb[0m
+
+2014-09-10T20:52:11.643Z - info: [90mGET /css/jqueryspa.css [32m200 [90m1ms - 10.05kb[0m
+
+2014-09-10T20:52:11.686Z - info: [90mGET /js/config.js [32m200 [90m1ms - 1.63kb[0m
+
+2014-09-10T20:52:11.706Z - info: [90mGET /js/cat/lib/chai.js [33m404 [90m3ms[0m
+
+2014-09-10T20:52:11.707Z - info: [90mGET /js/cat/lib/jspath.js [33m404 [90m3ms[0m
+
+2014-09-10T20:52:11.710Z - info: [90mGET /js/cat/lib/tmr.js [33m404 [90m3ms[0m
+
+2014-09-10T20:52:11.711Z - info: [90mGET /js/cat/lib/cat.js [33m404 [90m2ms[0m
+
+2014-09-10T20:52:11.715Z - info: [90mGET /js/app.js [32m200 [90m4ms - 255b[0m
+
+2014-09-10T20:52:11.715Z - info: [90mGET /js/config/router.js [32m200 [90m4ms - 615b[0m
+
+2014-09-10T20:52:11.716Z - info: [90mGET /js/controllers/app.js [32m200 [90m4ms - 1.78kb[0m
+
+2014-09-10T20:52:11.718Z - info: [90mGET /js/directives/generatelt.js [32m200 [90m0ms - 2.61kb[0m
+
+2014-09-10T20:52:11.721Z - info: [90mGET /js/directives/scrollto.js [32m200 [90m2ms - 1.32kb[0m
+
+2014-09-10T20:52:11.722Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [32m200 [90m1ms - 82.3kb[0m
+
+2014-09-10T20:52:11.763Z - info: [90mGET /js/common/manager.js [32m200 [90m2ms - 6.24kb[0m
+
+2014-09-10T20:52:11.763Z - info: [90mGET /js/services/data.js [32m200 [90m1ms - 3.65kb[0m
+
+2014-09-10T20:52:11.766Z - info: [90mGET /bower_components/angular/angular.js [32m200 [90m9ms - 759.52kb[0m
+
+2014-09-10T20:52:11.811Z - info: [90mGET /bower_components/angular-route/angular-route.js [32m200 [90m3ms - 32.28kb[0m
+
+2014-09-10T20:52:11.863Z - info: [90mGET /templates/app.html [32m200 [90m3ms - 413b[0m
+
+2014-09-10T20:52:11.886Z - info: [90mGET /js/data/app.json [32m200 [90m1ms - 670b[0m
+
+2014-09-10T20:52:11.944Z - info: [90mGET /pages/home.html [32m200 [90m1ms - 907b[0m
+
+2014-09-10T20:52:11.947Z - info: [90mGET /pages/howto.html [32m200 [90m2ms - 525b[0m
+
+2014-09-10T20:52:11.949Z - info: [90mGET /pages/credits.html [32m200 [90m1ms - 875b[0m
+
+2014-09-10T20:52:11.953Z - info: [90mGET /pages/about.html [32m200 [90m2ms - 899b[0m
+
+2014-09-10T20:52:12.005Z - info: [90mGET /css/images/title.png [32m200 [90m8ms - 37.75kb[0m
+
+2014-09-10T20:52:12.005Z - info: [90mGET /css/images/catjs_48.png [32m200 [90m9ms - 1.36kb[0m
+
+2014-09-10T20:52:12.005Z - info: [90mGET /css/images/jqueryconf_200.png [32m200 [90m8ms - 53.12kb[0m
+
+2014-09-10T20:52:12.005Z - info: [90mGET /css/images/todomvc.png [32m200 [90m8ms - 19.42kb[0m
+
+2014-09-10T20:52:12.006Z - info: [90mGET /css/images/todomvcnote.png [32m200 [90m8ms - 16.9kb[0m
+
+2014-09-10T20:52:12.006Z - info: [90mGET /css/images/bullet_info_40.png [32m200 [90m8ms - 2.78kb[0m
+
+2014-09-10T20:52:12.026Z - info: [90mGET /css/images/bullet_info_32.png [32m200 [90m1ms - 2.04kb[0m
+
+2014-09-10T20:52:15.276Z - info: [90mGET /app.html [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.292Z - info: [90mGET /bower_components/requirejs/require.js [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.294Z - info: [90mGET /css/jqueryspa.css [36m304 [90m0ms[0m
+
+2014-09-10T20:52:15.344Z - info: [90mGET /js/config.js [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.364Z - info: [90mGET /js/cat/lib/jspath.js [33m404 [90m0ms[0m
+
+2014-09-10T20:52:15.366Z - info: [90mGET /js/cat/lib/chai.js [33m404 [90m0ms[0m
+
+2014-09-10T20:52:15.368Z - info: [90mGET /js/cat/lib/tmr.js [33m404 [90m2ms[0m
+
+2014-09-10T20:52:15.368Z - info: [90mGET /js/cat/lib/cat.js [33m404 [90m1ms[0m
+
+2014-09-10T20:52:15.369Z - info: [90mGET /js/app.js [36m304 [90m2ms[0m
+
+2014-09-10T20:52:15.369Z - info: [90mGET /js/config/router.js [36m304 [90m2ms[0m
+
+2014-09-10T20:52:15.373Z - info: [90mGET /js/controllers/app.js [36m304 [90m0ms[0m
+
+2014-09-10T20:52:15.376Z - info: [90mGET /js/directives/generatelt.js [36m304 [90m0ms[0m
+
+2014-09-10T20:52:15.383Z - info: [90mGET /js/directives/scrollto.js [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.384Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.390Z - info: [90mGET /js/common/manager.js [36m304 [90m2ms[0m
+
+2014-09-10T20:52:15.391Z - info: [90mGET /js/services/data.js [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.402Z - info: [90mGET /bower_components/angular/angular.js [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.413Z - info: [90mGET /bower_components/angular-route/angular-route.js [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.438Z - info: [90mGET /templates/app.html [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.451Z - info: [90mGET /js/data/app.json [36m304 [90m0ms[0m
+
+2014-09-10T20:52:15.472Z - info: [90mGET /pages/home.html [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.477Z - info: [90mGET /pages/howto.html [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.478Z - info: [90mGET /pages/credits.html [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.478Z - info: [90mGET /pages/about.html [36m304 [90m0ms[0m
+
+2014-09-10T20:52:15.501Z - info: [90mGET /css/images/bullet_info_32.png [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.502Z - info: [90mGET /css/images/title.png [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.506Z - info: [90mGET /css/images/catjs_48.png [36m304 [90m3ms[0m
+
+2014-09-10T20:52:15.507Z - info: [90mGET /css/images/jqueryconf_200.png [36m304 [90m3ms[0m
+
+2014-09-10T20:52:15.507Z - info: [90mGET /css/images/todomvc.png [36m304 [90m3ms[0m
+
+2014-09-10T20:52:15.507Z - info: [90mGET /css/images/todomvcnote.png [36m304 [90m1ms[0m
+
+2014-09-10T20:52:15.513Z - info: [90mGET /css/images/bullet_info_40.png [36m304 [90m0ms[0m
+
+2014-09-10T20:52:18.609Z - info: [90mGET /bower_components/jquery/dist/jquery.min.map [32m200 [90m2ms - 124.34kb[0m
+
+2014-09-10T20:54:07.326Z - info: [90mGET /app.html [32m200 [90m7ms - 1.53kb[0m
+
+2014-09-10T20:54:07.350Z - info: [90mGET /css/jqueryspa.css [32m200 [90m2ms - 10.05kb[0m
+
+2014-09-10T20:54:07.354Z - info: [90mGET /bower_components/requirejs/require.js [32m200 [90m2ms - 81.14kb[0m
+
+2014-09-10T20:54:07.444Z - info: [90mGET /js/config.js [32m200 [90m1ms - 1.63kb[0m
+
+2014-09-10T20:54:07.480Z - info: [90mGET /cat/lib/jspath.js [32m200 [90m2ms - 12.19kb[0m
+
+2014-09-10T20:54:07.481Z - info: [90mGET /cat/lib/chai.js [32m200 [90m4ms - 150.57kb[0m
+
+2014-09-10T20:54:07.496Z - info: [90mGET /cat/lib/tmr.js [32m200 [90m5ms - 38.22kb[0m
+
+2014-09-10T20:54:07.504Z - info: [90mGET /cat/lib/cat.js [32m200 [90m8ms - 96.39kb[0m
+
+2014-09-10T20:54:07.505Z - info: [90mGET /js/app.js [32m200 [90m3ms - 255b[0m
+
+2014-09-10T20:54:07.506Z - info: [90mGET /js/config/router.js [32m200 [90m3ms - 615b[0m
+
+2014-09-10T20:54:07.512Z - info: [90mGET /js/controllers/app.js [32m200 [90m2ms - 1.78kb[0m
+
+2014-09-10T20:54:07.529Z - info: [90mGET /js/directives/generatelt.js [32m200 [90m1ms - 2.61kb[0m
+
+2014-09-10T20:54:07.534Z - info: [90mGET /js/directives/scrollto.js [32m200 [90m3ms - 1.32kb[0m
+
+2014-09-10T20:54:07.536Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [32m200 [90m1ms - 82.3kb[0m
+
+2014-09-10T20:54:07.594Z - info: [90mGET /app.htmlcat/config/testdata.json [33m404 [90m2ms[0m
+
+2014-09-10T20:54:07.606Z - info: [90mGET /app.htmlcat/config/cat.json [33m404 [90m1ms[0m
+
+2014-09-10T20:54:07.616Z - info: [90mGET /cat/lib/cat.src.js [32m200 [90m1ms - 7.69kb[0m
+
+2014-09-10T20:54:07.682Z - info: [90mGET /js/common/manager.js [32m200 [90m3ms - 6.24kb[0m
+
+2014-09-10T20:54:07.682Z - info: [90mGET /js/services/data.js [32m200 [90m2ms - 3.65kb[0m
+
+2014-09-10T20:54:07.699Z - info: [90mGET /cat/lib/cat.css [32m200 [90m5ms - 86.47kb[0m
+
+2014-09-10T20:54:07.712Z - info: [90mGET /bower_components/angular/angular.js [32m200 [90m43ms - 759.52kb[0m
+
+2014-09-10T20:54:07.790Z - info: [90mGET /bower_components/angular-route/angular-route.js [32m200 [90m3ms - 32.28kb[0m
+
+2014-09-10T20:54:07.852Z - info: [90mGET /templates/app.html [32m200 [90m1ms - 413b[0m
+
+2014-09-10T20:54:07.884Z - info: [90mGET /js/data/app.json [32m200 [90m1ms - 670b[0m
+
+2014-09-10T20:54:08.075Z - info: [90mGET /pages/home.html [32m200 [90m1ms - 907b[0m
+
+2014-09-10T20:54:08.077Z - info: [90mGET /pages/howto.html [32m200 [90m1ms - 525b[0m
+
+2014-09-10T20:54:08.083Z - info: [90mGET /pages/credits.html [32m200 [90m1ms - 875b[0m
+
+2014-09-10T20:54:08.092Z - info: [90mGET /pages/about.html [32m200 [90m3ms - 899b[0m
+
+2014-09-10T20:54:08.093Z - info: [90mGET /bower_components/jquery/dist/jquery.min.map [32m200 [90m3ms - 124.34kb[0m
+
+2014-09-10T20:54:08.134Z - info: [90mGET /css/images/title.png [32m200 [90m3ms - 37.75kb[0m
+
+2014-09-10T20:54:08.134Z - info: [90mGET /css/images/catjs_48.png [32m200 [90m3ms - 1.36kb[0m
+
+2014-09-10T20:54:08.135Z - info: [90mGET /css/images/jqueryconf_200.png [32m200 [90m3ms - 53.12kb[0m
+
+2014-09-10T20:54:08.136Z - info: [90mGET /css/images/todomvc.png [32m200 [90m3ms - 19.42kb[0m
+
+2014-09-10T20:54:08.144Z - info: [90mGET /css/images/todomvcnote.png [32m200 [90m4ms - 16.9kb[0m
+
+2014-09-10T20:54:08.147Z - info: [90mGET /css/images/bullet_info_40.png [32m200 [90m1ms - 2.78kb[0m
+
+2014-09-10T20:54:08.191Z - info: [90mGET /css/images/bullet_info_32.png [32m200 [90m1ms - 2.04kb[0m
+
+2014-09-10T20:54:57.197Z - info: [90mGET /app.html [32m200 [90m1ms - 1.53kb[0m
+
+2014-09-10T20:54:57.221Z - info: [90mGET /css/jqueryspa.css [32m200 [90m2ms - 10.05kb[0m
+
+2014-09-10T20:54:57.222Z - info: [90mGET /bower_components/requirejs/require.js [32m200 [90m3ms - 81.14kb[0m
+
+2014-09-10T20:54:57.323Z - info: [90mGET /js/config.js [32m200 [90m2ms - 1.63kb[0m
+
+2014-09-10T20:54:57.343Z - info: [90mGET /cat/lib/chai.js [32m200 [90m6ms - 150.57kb[0m
+
+2014-09-10T20:54:57.355Z - info: [90mGET /cat/lib/jspath.js [32m200 [90m2ms - 12.19kb[0m
+
+2014-09-10T20:54:57.363Z - info: [90mGET /cat/lib/tmr.js [32m200 [90m7ms - 38.22kb[0m
+
+2014-09-10T20:54:57.363Z - info: [90mGET /cat/lib/cat.js [32m200 [90m7ms - 96.39kb[0m
+
+2014-09-10T20:54:57.364Z - info: [90mGET /js/app.js [32m200 [90m4ms - 255b[0m
+
+2014-09-10T20:54:57.365Z - info: [90mGET /js/config/router.js [32m200 [90m5ms - 615b[0m
+
+2014-09-10T20:54:57.373Z - info: [90mGET /js/controllers/app.js [32m200 [90m1ms - 1.78kb[0m
+
+2014-09-10T20:54:57.390Z - info: [90mGET /js/directives/generatelt.js [32m200 [90m5ms - 2.61kb[0m
+
+2014-09-10T20:54:57.390Z - info: [90mGET /js/directives/scrollto.js [32m200 [90m4ms - 1.32kb[0m
+
+2014-09-10T20:54:57.391Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [32m200 [90m4ms - 82.3kb[0m
+
+2014-09-10T21:11:18.195Z - info: [90mGET /app.htmlcat/config/testdata.json [33m404 [90m55ms[0m
+
+2014-09-10T21:11:20.999Z - info: [90mGET /app.htmlcat/config/cat.json [33m404 [90m1ms[0m
+
+2014-09-10T21:11:21.011Z - info: [90mGET /cat/lib/cat.src.js [32m200 [90m3ms - 7.69kb[0m
+
+2014-09-10T21:11:21.060Z - info: [90mGET /js/common/manager.js [32m200 [90m3ms - 6.24kb[0m
+
+2014-09-10T21:11:21.060Z - info: [90mGET /js/services/data.js [32m200 [90m3ms - 3.65kb[0m
+
+2014-09-10T21:11:21.155Z - info: [90mGET /bower_components/jquery/dist/jquery.min.map [32m200 [90m2ms - 124.34kb[0m
+
+2014-09-10T21:11:36.349Z - info: [90mGET /app.html [32m200 [90m2ms - 1.53kb[0m
+
+2014-09-10T21:11:36.371Z - info: [90mGET /css/jqueryspa.css [32m200 [90m2ms - 10.05kb[0m
+
+2014-09-10T21:11:36.372Z - info: [90mGET /bower_components/requirejs/require.js [32m200 [90m2ms - 81.14kb[0m
+
+2014-09-10T21:11:36.443Z - info: [90mGET /js/config.js [32m200 [90m1ms - 1.63kb[0m
+
+2014-09-10T21:11:36.465Z - info: [90mGET /cat/lib/chai.js [32m200 [90m2ms - 150.57kb[0m
+
+2014-09-10T21:11:36.483Z - info: [90mGET /cat/lib/jspath.js [32m200 [90m6ms - 12.19kb[0m
+
+2014-09-10T21:11:36.485Z - info: [90mGET /cat/lib/tmr.js [32m200 [90m6ms - 38.22kb[0m
+
+2014-09-10T21:11:36.486Z - info: [90mGET /js/app.js [32m200 [90m6ms - 255b[0m
+
+2014-09-10T21:11:36.486Z - info: [90mGET /js/config/router.js [32m200 [90m5ms - 615b[0m
+
+2014-09-10T21:11:36.487Z - info: [90mGET /cat/lib/cat.js [32m200 [90m8ms - 96.4kb[0m
+
+2014-09-10T21:11:36.488Z - info: [90mGET /js/controllers/app.js [32m200 [90m1ms - 1.78kb[0m
+
+2014-09-10T21:11:36.505Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [32m200 [90m1ms - 82.3kb[0m
+
+2014-09-10T21:11:36.508Z - info: [90mGET /js/directives/generatelt.js [32m200 [90m4ms - 2.61kb[0m
+
+2014-09-10T21:11:36.509Z - info: [90mGET /js/directives/scrollto.js [32m200 [90m3ms - 1.32kb[0m
+
+2014-09-10T21:13:11.602Z - info: [90mGET /cat/config/testdata.json [32m200 [90m3ms - 259b[0m
+
+2014-09-10T21:13:11.603Z - info: [90mGET /cat/config/cat.json [32m200 [90m2ms - 1.33kb[0m
+
+2014-09-10T21:13:11.625Z - info: [90mGET /cat/lib/cat.src.js [36m304 [90m1ms[0m
+
+2014-09-10T21:13:11.637Z - info: [90mGET /assert?testName=generalJSError&scenario=undefined&message=Uncaught%20Error:%20Load%20timeout%20for%20modules:%20catsrc,angular,angularoute,controllers/app,directives/generatelt,directives/scrollto,jqueryhttp://requirejs.org/docs/errors.html [32m200 [90m4ms - 221b[0m
+
+2014-09-10T21:13:11.715Z - info: [90mGET /js/common/manager.js [36m304 [90m1ms[0m
+
+2014-09-10T21:13:11.715Z - info: [90mGET /js/services/data.js [36m304 [90m0ms[0m
+
+2014-09-10T21:13:24.310Z - info: [90mGET /app.html [32m200 [90m5ms - 1.53kb[0m
+
+2014-09-10T21:13:24.352Z - info: [90mGET /css/jqueryspa.css [32m200 [90m5ms - 10.05kb[0m
+
+2014-09-10T21:13:24.353Z - info: [90mGET /bower_components/requirejs/require.js [32m200 [90m5ms - 81.14kb[0m
+
+2014-09-10T21:13:24.400Z - info: [90mGET /js/config.js [32m200 [90m1ms - 1.63kb[0m
+
+2014-09-10T21:13:24.461Z - info: [90mGET /cat/lib/jspath.js [32m200 [90m5ms - 12.19kb[0m
+
+2014-09-10T21:13:24.462Z - info: [90mGET /cat/lib/chai.js [32m200 [90m6ms - 150.57kb[0m
+
+2014-09-10T21:13:24.463Z - info: [90mGET /cat/lib/tmr.js [32m200 [90m5ms - 38.22kb[0m
+
+2014-09-10T21:13:24.464Z - info: [90mGET /cat/lib/cat.js [32m200 [90m5ms - 96.4kb[0m
+
+2014-09-10T21:13:24.464Z - info: [90mGET /js/config/router.js [32m200 [90m4ms - 615b[0m
+
+2014-09-10T21:13:24.464Z - info: [90mGET /js/controllers/app.js [32m200 [90m3ms - 1.78kb[0m
+
+2014-09-10T21:13:24.469Z - info: [90mGET /js/directives/generatelt.js [32m200 [90m3ms - 2.61kb[0m
+
+2014-09-10T21:13:24.469Z - info: [90mGET /js/directives/scrollto.js [32m200 [90m2ms - 1.32kb[0m
+
+2014-09-10T21:13:24.479Z - info: [90mGET /js/app.js [32m200 [90m2ms - 255b[0m
+
+2014-09-10T21:13:24.479Z - info: [90mGET /bower_components/jquery/dist/jquery.min.js [32m200 [90m3ms - 82.3kb[0m
+
+2014-09-10T21:13:24.508Z - info: [90mGET /js/common/manager.js [32m200 [90m3ms - 6.24kb[0m
+
+2014-09-10T21:13:24.508Z - info: [90mGET /js/services/data.js [32m200 [90m2ms - 3.65kb[0m
+
+2014-09-10T21:13:24.554Z - info: [90mGET /cat/config/testdata.json [32m200 [90m2ms - 259b[0m
+
+2014-09-10T21:13:24.559Z - info: [90mGET /cat/config/cat.json [32m200 [90m1ms - 1.33kb[0m
+
+2014-09-10T21:13:24.605Z - info: [90mGET /cat/lib/cat.src.js [32m200 [90m1ms - 7.69kb[0m
+
+2014-09-10T21:13:24.642Z - info: [90mGET /bower_components/angular/angular.js [32m200 [90m11ms - 759.52kb[0m
+
+2014-09-10T21:13:24.660Z - info: [90mGET /cat/lib/cat.css [32m200 [90m2ms - 86.47kb[0m
+
+2014-09-10T21:13:24.693Z - info: [90mGET /bower_components/angular-route/angular-route.js [32m200 [90m2ms - 32.28kb[0m
+
+2014-09-10T21:13:24.768Z - info: [90mGET /templates/app.html [32m200 [90m2ms - 413b[0m
+
+2014-09-10T21:13:24.774Z - info: [90mGET /scraps?scrap=bootstrapInitTest&testId=46d63ca8-a768-5751-bb5e-28f6f374765f [32m200 [90m3ms - 357b[0m
+
+2014-09-10T21:13:24.792Z - info: [90mGET /js/data/app.json [32m200 [90m2ms - 670b[0m
+
+2014-09-10T21:13:24.807Z - info: [90mGET /assert?testName=bootstrapInitTest&scenario=undefined&message=Test%20Passed&error=undefined&status=success&reports=console&name=jqueryspa-test&type=test&hasPhantom=false&id=46d63ca8-a768-5751-bb5e-28f6f374765f&cache=Wed,%2010%20Sep%202014%2021:13:24%20GMT [32m200 [90m1ms - 88b[0m
+
+2014-09-10T21:13:24.853Z - info: [90mGET /pages/home.html [32m200 [90m2ms - 907b[0m
+
+2014-09-10T21:13:24.860Z - info: [90mGET /pages/howto.html [32m200 [90m4ms - 525b[0m
+
+2014-09-10T21:13:24.860Z - info: [90mGET /pages/credits.html [32m200 [90m3ms - 875b[0m
+
+2014-09-10T21:13:24.866Z - info: [90mGET /pages/about.html [32m200 [90m1ms - 899b[0m
+
+2014-09-10T21:13:24.890Z - info: [90mGET /css/images/bullet_info_32.png [32m200 [90m1ms - 2.04kb[0m
+
+2014-09-10T21:13:24.928Z - info: [90mGET /css/images/title.png [32m200 [90m7ms - 37.75kb[0m
+
+2014-09-10T21:13:24.928Z - info: [90mGET /css/images/catjs_48.png [32m200 [90m7ms - 1.36kb[0m
+
+2014-09-10T21:13:24.929Z - info: [90mGET /css/images/jqueryconf_200.png [32m200 [90m7ms - 53.12kb[0m
+
+2014-09-10T21:13:24.929Z - info: [90mGET /css/images/todomvc.png [32m200 [90m7ms - 19.42kb[0m
+
+2014-09-10T21:13:24.929Z - info: [90mGET /css/images/todomvcnote.png [32m200 [90m6ms - 16.9kb[0m
+
+2014-09-10T21:13:24.941Z - info: [90mGET /css/images/bullet_info_40.png [32m200 [90m2ms - 2.78kb[0m
+
+2014-09-10T21:13:25.046Z - info: [90mGET /scraps?scrap=menuTest&testId=46d63ca8-a768-5751-bb5e-28f6f374765f [32m200 [90m1ms - 339b[0m
+
+2014-09-10T21:13:25.047Z - info: [90mGET /scraps?scrap=menuItemsAction&testId=46d63ca8-a768-5751-bb5e-28f6f374765f [32m200 [90m1ms - 387b[0m
+
+2014-09-10T21:13:27.056Z - info: [90mGET /assert?testName=menuTest&scenario=undefined&message=Test%20Passed&error=undefined&status=success&reports=console&name=jqueryspa-test&type=test&hasPhantom=false&id=46d63ca8-a768-5751-bb5e-28f6f374765f&cache=Wed,%2010%20Sep%202014%2021:13:27%20GMT [32m200 [90m1ms - 79b[0m
+
+2014-09-10T21:13:39.059Z - info: [90mGET /assert?testName=End&scenario=undefined&message=End&error=&status=End&reports=console&name=jqueryspa-test&type=test&hasPhantom=false&id=46d63ca8-a768-5751-bb5e-28f6f374765f&cache=Wed,%2010%20Sep%202014%2021:13:39%20GMT [32m200 [90m0ms - 62b[0m
+
