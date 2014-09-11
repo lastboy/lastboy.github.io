@@ -31,7 +31,7 @@
   "ui": true,
   "report": {
     "format": ["console"],
-    "disable": false
+    "disable": true
   },
   "assert": {
     "errors": true
