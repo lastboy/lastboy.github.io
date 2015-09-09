@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cesium Demo</title>
+
+    <!--
+        Cesium demo: Spin the globe & stop
+
+    -->
+
+    <link rel="stylesheet" type="text/css" href="../../css/app.css">
+
+    <script src="../../js/cesium/cesium.js"></script>
+    <script src="../../js/app.js"></script>
+
+</head>
+
+<body>
+
+<div id="cesiumContainer"></div>
+
+<script>
+
+    var viewer, scene;
+
+    /*
+     Initialization
+     */
+
+    app.init("Demo for putting data on the globe according to location");
+
+    // Local Natural Earth assets provider
+    localNaturalEarthProvider = new Cesium.TileMapServiceImageryProvider({
+        url: Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')
+    });
+
+    // Main Cesium viewer
+    // By default, Bing provider is set.
+    // For local assets we have to override the defaults.
+    viewer = new Cesium.CesiumWidget('cesiumContainer', {
+        imageryProvider: localNaturalEarthProvider
+    });
+
+    scene = viewer.scene;
+
+    /**
+     * Transform a point from the ICRF axes
+     * https://cesiumjs.org/Cesium/Build/Documentation/Transforms.html
+     *
+     * @param scene
+     * @param time
+     */
+    function icrf(scene, time) {
+        if (scene.mode !== Cesium.SceneMode.SCENE3D) {
+            return;
+        }
+
+        var icrfToFixed = Cesium.Transforms.computeIcrfToFixedMatrix(time);
+        if (Cesium.defined(icrfToFixed)) {
+            var camera = viewer.camera;
+            var offset = Cesium.Cartesian3.clone(camera.position);
+            var transform = Cesium.Matrix4.fromRotationTranslation(icrfToFixed);
+            camera.lookAtTransform(transform, offset);
+        }
+    }
+
+    // Start globe spinning
+    function start() {
+        viewer.clock.multiplier = 3 * 60 * 60;
+        scene.preRender.addEventListener(icrf);
+    }
+
+    // Stop globe spinning
+    function stop() {
+        viewer.clock.multiplier = 1.0;
+        scene.preRender.removeEventListener(icrf);
+    }
+
+    // initial call
+    function viewInICRF() {
+
+        setTimeout(function() {
+            app.log("[app] Start spinning");
+            start();
+
+            setTimeout(function() {
+                app.log("[app] Stop spinning");
+                stop();
+
+            }, 3000);
+
+
+        }, 1000);
+
+    }
+
+    viewInICRF();
+
+</script>
+</body>
+</html>

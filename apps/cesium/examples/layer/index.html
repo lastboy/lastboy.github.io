@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cesium Demo</title>
+
+    <!--
+        Cesium demo: Adding a layer on top of the base world map using open street provider
+
+        - Image Layer
+        - Stamen Service layer
+        - Handle open street provider network failure
+
+    -->
+
+    <link rel="stylesheet" type="text/css" href="../../css/app.css">
+
+    <script src="../../js/cesium/cesium.js"></script>
+    <script src="../../js/app.js"></script>
+
+</head>
+<body>
+<div id="cesiumContainer"></div>
+
+<script>
+
+    var layers,
+            viewer,
+            localNaturalEarthProvider, localImageProvider, stamenProvider,
+            stamenLayer;
+
+
+    /*
+        Initialization
+     */
+
+    app.init("Demo for adding a layer on top of the base world map \n using open street provider");
+
+    // Local Natural Earth assets provider
+    localNaturalEarthProvider = new Cesium.TileMapServiceImageryProvider({
+        url: Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')
+    });
+
+    // Main Cesium viewer
+    // By default, Bing provider is set.
+    // For local assets we have to override the default.
+    viewer = new Cesium.CesiumWidget('cesiumContainer', {
+        imageryProvider: localNaturalEarthProvider
+    });
+
+    // layers handle
+    layers = viewer.scene.imageryLayers;
+
+
+    // Local Image Layer
+    localImageProvider = new Cesium.SingleTileImageryProvider({
+        url : '../../images/status/_Good.png',
+        rectangle : Cesium.Rectangle.fromDegrees(-65.0, 18.0, -52.0, 29.75)
+    });
+
+    // stamen map provider - maximum zoom level set to 6
+    // http://stamen.com/
+    // https://www.openstreetmap.org
+    stamenProvider = new Cesium.OpenStreetMapImageryProvider({
+        url : 'http://tile.stamen.com/toner',
+        maximumLevel: 6
+    });
+
+    // Open Street Provider Error Listener
+    stamenProvider.errorEvent.addEventListener(function(e) {
+        if (e) {
+            console.error("App Open Street Provider Error]  \n", e.message, e);
+            app.log("[App Open Street Provider Error] ", e.message, "x: " + e.x, "y:" + e.y);
+        }
+    }, stamenProvider);
+
+    /*
+        Aadding provider as layers
+    */
+
+    layers.addImageryProvider(localNaturalEarthProvider);
+
+    // adding stamen tiles map with opacity
+    stamenLayer = layers.addImageryProvider(stamenProvider);
+    stamenLayer.alpha = 0.4;
+
+    layers.addImageryProvider(localImageProvider);
+
+
+</script>
+</body>
+</html>

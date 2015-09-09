@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cesium Demo</title>
+
+    <!--
+        Cesium demo: Putting some details on the states area according to its position
+
+    -->
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/app.css">
+
+    <script src="../../js/cesium/cesium.js"></script>
+    <script src="../../js/app.js"></script>
+
+</head>
+<body>
+<div id="cesiumContainer"></div>
+
+<script>
+
+    var viewer, scene,
+            datasource, dataSourceCollection, dataSourceDisplay, datasourcepromise,
+            highlightedEntity, pickedColor, mouseHandler;
+
+    /*
+     Initialization
+     */
+
+    app.init("Demo for putting details on states area");
+
+
+
+    // Local Natural Earth assets provider
+    localNaturalEarthProvider = new Cesium.TileMapServiceImageryProvider({
+        url: Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')
+    });
+
+    // Main Cesium viewer
+    // By default, Bing provider is set.
+    // For local assets we have to override the default.
+    viewer = new Cesium.CesiumWidget('cesiumContainer', {
+        imageryProvider: localNaturalEarthProvider
+    });
+
+    scene = viewer.scene;
+
+    /*
+     Geo Json Data Source
+     */
+
+    dataSourceCollection = new Cesium.DataSourceCollection();
+
+    datasource = new Cesium.GeoJsonDataSource();
+
+    dataSourceDisplay =  new Cesium.DataSourceDisplay({
+        scene: scene,
+        dataSourceCollection : dataSourceCollection
+    });
+
+    // Loading local data source US States topo json format
+    datasourcepromise = datasource.load('../../data/ne_10m_us_states.topojson', {
+        stroke: Cesium.Color.TRANSPARENT,
+        fill: Cesium.Color.BLUE.withAlpha(.5),
+        strokeWidth: 1
+    });
+
+
+    // Data done loading
+    // Processing over the given entities
+    datasourcepromise.then(function(ds) {
+
+        var entities, entity, positions, center,
+                name, id, color, colorHash = {},
+                i= 0, labelEntity, entityLabelCollection = [], entityLabelCollectionIdx = {};
+
+        // Add the incoming data
+        dataSourceCollection.add(ds);
+
+        // Get the array of entities
+        entities = ds.entities.values;
+
+        // Loops over the entities
+        for (i = 0; i < entities.length; i++) {
+
+            // For each entity, create a random color based on the state name.
+            // Some states have multiple entities, so we store the color in a
+            // hash so that we use the same color for the entire state.
+            entity = entities[i];
+            name = entity.name;
+            id = entity.id;
+            color = colorHash[name];
+
+            if (!color) {
+                color = Cesium.Color.fromRandom({
+                    alpha : 1.0
+                });
+                colorHash[name] = color;
+            }
+//
+            //Set the polygon material to our random color.
+            entity.polygon.material = color.withAlpha(.6);
+
+            //Remove the outlines.
+            entity.polygon.outline = false;
+
+            if (!entityLabelCollectionIdx[name]) {
+
+                labelEntity = {
+                    ellipse : {
+                        semiMinorAxis: 100000.0,
+                        semiMajorAxis: 100000.0,
+                        material: '../../images/status/_Good.png'
+                    }
+                };
+
+                // get the state entity's polygon position
+                positions = entity.polygon.hierarchy['_value'].positions;
+                center = Cesium.BoundingSphere.fromPoints(positions).center;
+
+                // set the new label according to the state position
+                labelEntity.position = new Cesium.ConstantPositionProperty(center);
+
+                // store the new entity data
+                entityLabelCollection.push(labelEntity);
+                entityLabelCollectionIdx[name] = labelEntity;
+            }
+        }
+
+        // Update all entities - does not update dynamic entities changes
+        // dataSourceDisplay.update(new Cesium.JulianDate());
+
+        // Update all entities - Updates on any entity dynamic changes
+        viewer.clock.onTick.addEventListener(function(clock) {
+            dataSourceDisplay.update(clock.currentTime);
+
+        });
+
+        // Print all labels
+        entityLabelCollection.forEach(function(item) {
+            datasource.entities.add(item);
+        });
+
+
+    }).otherwise(function(error){
+
+        //Display any errrors encountered while loading.
+        console.error("Error: ", error);
+        app.log("Error: " + JSON.stringify(error));
+    });
+
+
+</script>
+</body>
+</html>

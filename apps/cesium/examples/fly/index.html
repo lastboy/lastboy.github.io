@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cesium Demo</title>
+
+    <!--
+        Cesium demo: Fly To a state
+
+    -->
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/app.css">
+
+    <script src="../../js/cesium/cesium.js"></script>
+    <script src="../../js/app.js"></script>
+
+</head>
+<body>
+<div id="cesiumContainer"></div>
+
+<script>
+
+    var viewer, scene, camera,
+            datasource, dataSourceCollection, dataSourceDisplay, datasourcepromise,
+            highlightedEntity, pickedColor;
+
+    /*
+        Initialization
+     */
+
+    app.init("Fly To a state demo \n wait a moment for the focus will start...");
+
+    // Local Natural Earth assets provider
+    localNaturalEarthProvider = new Cesium.TileMapServiceImageryProvider({
+        url: Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')
+    });
+
+    // Main Cesium viewer
+    // By default, Bing provider is set.
+    // For local assets we have to override the default.
+    viewer = new Cesium.CesiumWidget('cesiumContainer', {
+        imageryProvider: localNaturalEarthProvider
+    });
+
+    scene = viewer.scene;
+    camera = scene.camera;
+
+    /*
+        Geo Json Data Source
+     */
+
+    dataSourceCollection = new Cesium.DataSourceCollection();
+
+    datasource = new Cesium.GeoJsonDataSource();
+
+    dataSourceDisplay =  new Cesium.DataSourceDisplay({
+        scene: scene,
+        dataSourceCollection : dataSourceCollection
+    });
+
+    // Loading local data source US States topo json format
+    datasourcepromise = datasource.load('../../data/ne_10m_us_states.topojson', {
+        stroke: Cesium.Color.TRANSPARENT,
+        fill: Cesium.Color.YELLOW,
+        strokeWidth: 1
+    });
+
+
+    // Data done loading
+    // Processing over the given entities
+    datasourcepromise.then(function(ds) {
+
+        var entities, entity,
+                name, color, colorHash = {},
+                positions, center, i=0;
+
+        // Add the incoming data
+        dataSourceCollection.add(ds);
+
+        // Get the array of entities
+        entities = ds.entities.values;
+
+        // Loops over the entities
+        for (i = 0; i < entities.length; i++) {
+
+            // For each entity, create a random color based on the state name.
+            // Some states have multiple entities, so we store the color in a
+            // hash so that we use the same color for the entire state.
+            entity = entities[i];
+            name = entity.name;
+            color = colorHash[name];
+
+            if (!color) {
+                color = Cesium.Color.fromRandom({
+                    alpha : 1.0
+                });
+                colorHash[name] = color;
+            }
+
+            //Set the polygon material to our random color.
+            entity.polygon.material = color;
+
+            //Remove the outlines.
+            entity.polygon.outline = false;
+
+            //Extrude the polygon based on the state's population.  Each entity
+            //stores the properties for the GeoJSON feature it was created from
+            //Since the population is a huge number, we divide by 50.
+            entity.polygon.extrudedHeight = entity.properties.Population / 50.0;
+
+        }
+
+        // Update all entities - does not update dynamic entities changes
+        // dataSourceDisplay.update(new Cesium.JulianDate());
+
+        // Update all entities - Updates on any entity dynamic changes
+        viewer.clock.onTick.addEventListener(function(clock) {
+            dataSourceDisplay.update(clock.currentTime);
+
+        });
+
+
+        /* Referring to the last entity */
+
+        // entity's polygon positions
+        positions = entity.polygon.hierarchy['_value'].positions;
+
+        // entity's polygon center position
+        center = Cesium.BoundingSphere.fromPoints(positions).center;
+
+        /*  Suitable for zooming close to the element
+            camera.flyTo({
+               destination : center
+            });
+        */
+
+        // Timer for presentation display only
+        setTimeout(function() {
+
+            // Fly to the last entity element with nice distance
+            camera.flyToBoundingSphere(Cesium.BoundingSphere.fromPoints(positions), {})
+
+            // adding a label to the focused entity
+            var e = {
+                name :entity.id + "_label",
+
+                label : {
+                    text : name,
+                    font : '16px monospace',
+                    fillColor: Cesium.Color.BLACK,
+                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                    outlineWidth : 1,
+                    verticalOrigin : Cesium.VerticalOrigin.TOP,
+                    translucencyByDistance: new Cesium.NearFarScalar(10.0e2, 10.0, 18.0e6, 0),
+                    show: true
+                }
+            };
+
+            e.position = new Cesium.ConstantPositionProperty(center);
+            datasource.entities.add(e)
+
+        }, 3000);
+
+
+    }).otherwise(function(error){
+
+        //Display any errrors encountered while loading.
+        console.error("Error: ", error);
+    });
+
+
+</script>
+</body>
+</html>

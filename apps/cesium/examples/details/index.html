@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cesium Demo</title>
+
+    <!--
+        Cesium demo: Putting some details on the globe according to locations and camera zoom
+                        & Focus the camera on a certain location according to the mouse click on data point
+    -->
+
+    <link rel="stylesheet" type="text/css" href="../../css/app.css">
+
+    <script src="../../js/cesium/cesium.js"></script>
+    <script src="../../js/app.js"></script>
+
+</head>
+
+<body>
+
+<div id="cesiumContainer"></div>
+
+<script>
+
+    var viewer, scene, camera, mouseHandler, stamenProvider, layers, cameraHeightUtil,
+            dataSourceCollection, dataSourceDisplay, geoIndex = {}, geoData;
+
+    /*
+     Initialization
+     */
+
+    app.init("Demo for putting data on the globe according to location");
+
+    cameraHeightUtil = app.utils.cameraHeightUtil;
+
+    // Local Natural Earth assets provider
+    localNaturalEarthProvider = new Cesium.TileMapServiceImageryProvider({
+        url: Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')
+    });
+
+    // Main Cesium viewer
+    // By default, Bing provider is set.
+    // For local assets we have to override the default.
+    viewer = new Cesium.CesiumWidget('cesiumContainer', {
+        imageryProvider: localNaturalEarthProvider
+    });
+
+    scene = viewer.scene;
+    camera = viewer.camera;
+
+    /*
+        Adding provider as layers
+     */
+
+
+    // layers handle
+    layers = scene.imageryLayers;
+
+    // stamen map provider - maximum zoom level set to 6
+    // http://stamen.com/
+    // https://www.openstreetmap.org
+    stamenProvider = new Cesium.OpenStreetMapImageryProvider({
+        url : 'http://tile.stamen.com/toner',
+        maximumLevel: 6
+    });
+
+    // Open Street Provider Error Listener
+    stamenProvider.errorEvent.addEventListener(function(e) {
+        if (e) {
+            console.error("App Open Street Provider Error]  \n", e.message, e);
+            app.log("[App Open Street Provider Error] ", e.message, "x: " + e.x, "y:" + e.y);
+        }
+    }, stamenProvider);
+
+    // adding stamen tiles map with opacity
+    stamenLayer = layers.addImageryProvider(stamenProvider);
+    stamenLayer.alpha = 0.2;
+
+
+    /*
+         Geo Json Data Source
+     */
+
+    dataSourceCollection = new Cesium.DataSourceCollection();
+
+    dataSourceDisplay = new Cesium.DataSourceDisplay({
+        scene: scene,
+        dataSourceCollection: dataSourceCollection
+    });
+
+    datasource = new Cesium.CustomDataSource('data');
+    dataSourceCollection.add(datasource);
+
+    // Update all entities - Updates on any entity dynamic changes
+    viewer.clock.onTick.addEventListener(function (clock) {
+        dataSourceDisplay.update(clock.currentTime);
+
+    });
+
+    // Geo app data initialization
+    geoData = [{
+        id: "north.america",
+        name: "North America",
+        coords: {
+            longitude: -105.0866748,
+            latitude: 54.3186288
+
+        },
+        level: 1,
+        data: {
+            "fundex": "Good",
+            "total": 87
+        }
+    }, {
+        id: "south.america",
+        name: "South America",
+        level: 1,
+        coords: {
+            longitude: -55.329301,
+            latitude: -7.460597
+        },
+        data: {
+            "fundex": "Poor",
+            "total": 23
+        }
+    }, {
+        id: "newyork",
+        name: "New York",
+        level: 2,
+        coords: {
+            longitude: -75.8092096,
+            latitude: 42.7534979
+
+        },
+        data: {
+            "fundex": "Poor",
+            "total": 20
+        }
+    }, {
+        id: "wyoming",
+        name: "Wyoming",
+        level: 2,
+        coords: {
+            longitude: -107.3272775,
+            latitude: 43.0759618
+
+        },
+        data: {
+            "fundex": "Good",
+            "total": 87
+        }
+    }, {
+        id: "indiana",
+        name: "Indiana",
+        level: 2,
+        coords: {
+            longitude: -86.13275,
+            latitude: 39.7797845
+
+        },
+        data: {
+            "fundex": "Good",
+            "total": 87
+        }
+    }, {
+        id: "ohio",
+        name: "Ohio",
+        level: 2,
+        coords: {
+            longitude: -82.990829,
+            latitude: 39.9829514
+
+        },
+        data: {
+            "fundex": "Good",
+            "total": 87
+        }
+    }, {
+        id: "bolivia",
+        name: "Bolivia",
+        level: 2,
+        coords: {
+            longitude: -63.5493965,
+            latitude: -16.2837064
+
+        },
+        data: {
+            "fundex": "Poor",
+            "total": 20
+        }
+    }];
+
+    // Geo App data processing
+    geoData.forEach(function(item) {
+
+        var entity, ientity,
+                coords = item.coords,
+                data = item.data,
+                position = Cesium.Cartesian3.fromDegrees(coords.longitude, coords.latitude);
+
+        entity = {
+            position: position,
+            ellipse : {
+                semiMinorAxis: 300000.0,
+                semiMajorAxis: 300000.0,
+                material: '../../images/status/_' + (data.fundex) + '.png'
+
+            },
+            show: false
+
+        };
+
+        if (!geoIndex[item.level]) {
+            geoIndex[item.level] = [];
+        }
+
+        if (item.level === 1) {
+            entity.show = true;
+            entity.ellipse.semiMinorAxis = 400000.0;
+            entity.ellipse.semiMajorAxis = 400000.0;
+
+        } else if (item.level === 2) {
+            entity.ellipse.semiMinorAxis = 100000.0;
+            entity.ellipse.semiMajorAxis = 100000.0;
+        }
+
+        ientity = datasource.entities.add(entity);
+        geoIndex[item.level].push({entity: ientity, item: item});
+    });
+
+
+    /*
+        Mouse Events
+     */
+
+    // Mouse over handler
+    mouseHandler = viewer.screenSpaceEventHandler;
+
+    // On mouse wheel - update the data points visibility
+    mouseHandler.setInputAction(function (wheelZoomAmount) {
+
+        var ch = cameraHeightUtil();
+
+        function setData(level, key, value) {
+            if (geoIndex[level]) {
+                geoIndex[level].forEach(function (obj) {
+                    var item = obj.item,
+                            entity = obj.entity;
+
+                    if (entity) {
+                        entity[key] = value;
+                    }
+                });
+            }
+        }
+
+        if (ch < 170) { // level 1 > 110
+           setData(1, "show", false);
+           setData(2, "show", true);
+        } else {
+            setData(1, "show", true);
+            setData(2, "show", false);
+        }
+        app.log("[app] camera height sample: " + ch);
+
+    }, Cesium.ScreenSpaceEventType.WHEEL);
+
+
+    // On mouse click - focus on data point
+    mouseHandler.setInputAction(function(movement) {
+
+        // Pick the current polygon (state) according to the mouse position
+        var cartographic,
+                longitudeString, latitudeString,
+                position, ray,
+                mposition = movement.position,
+                pickedObject = scene.pick(mposition);
+
+        if (pickedObject) {
+            if (Cesium.defined(pickedObject) && pickedObject.id instanceof Cesium.Entity) {
+
+                ray = camera.getPickRay(mposition);
+                position = scene.globe.pick(ray, scene);
+                if (Cesium.defined(position)) {
+                    cartographic = Cesium.Ellipsoid.WGS84.cartesianToCartographic(position);
+                    longitudeString = Cesium.Math.toDegrees(cartographic.longitude).toFixed(2);
+                    latitudeString = Cesium.Math.toDegrees(cartographic.latitude).toFixed(2);
+                }
+
+                app.utils.fly({
+                    longitude: longitudeString,
+                    latitude: latitudeString
+
+                }, 50);
+
+            }
+        }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cesium Demo</title>
+
+    <!--
+        Cesium demo: Loading a world map from a generated topo json file
+        - Mouse state highlighting
+        - On click, fly to a state & back to the camera default position
+
+    -->
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/app.css">
+
+    <script src="../../js/cesium/cesium.js"></script>
+    <script src="../../js/app.js"></script>
+
+</head>
+<body>
+<div id="cesiumContainer"></div>
+
+<script>
+
+    var viewer, scene, defaultCameraPosition,
+            datasource, dataSourceCollection, dataSourceDisplay, datasourcepromise,
+            highlightedEntity, pickedColor, mouseHandler, highlightedEntity, pickedColor;
+
+    /*
+        Initialization
+     */
+
+    app.init("Demo for Loading a world map from a generated Topo JSON file ");
+
+
+    // Local Natural Earth assets provider
+    localNaturalEarthProvider = new Cesium.TileMapServiceImageryProvider({
+        url: Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')
+    });
+
+    // Main Cesium viewer
+    // By default, Bing provider is set.
+    // For local assets we have to override the default.
+    viewer = new Cesium.CesiumWidget('cesiumContainer', {
+        imageryProvider: localNaturalEarthProvider
+    });
+
+    defaultCameraPosition = viewer.camera.position.clone();
+    scene = viewer.scene;
+
+    /*
+        Geo Json Data Source
+     */
+
+    dataSourceCollection = new Cesium.DataSourceCollection();
+
+    datasource = new Cesium.GeoJsonDataSource();
+
+    dataSourceDisplay =  new Cesium.DataSourceDisplay({
+        scene: viewer.scene,
+        dataSourceCollection : dataSourceCollection
+    });
+
+    // Loading local data source US States topo json format
+    datasourcepromise = datasource.load('../../data/ne_110_admin_0_countries.topo.json', {
+        stroke: Cesium.Color.TRANSPARENT,
+        fill: Cesium.Color.BLUE.withAlpha(.4),
+        strokeWidth: 1
+    });
+
+
+    // Data done loading
+    // Processing over the given entities
+    datasourcepromise.then(function(ds) {
+
+        var entities, entity,
+                name, id,
+                i= 0;
+
+        // Add the incoming data
+        dataSourceCollection.add(ds);
+
+        // Get the array of entities
+        entities = ds.entities.values;
+
+        // Loops over the entities
+        for (i = 0; i < entities.length; i++) {
+
+            // For each entity, create a random color based on the state name.
+            // Some states have multiple entities, so we store the color in a
+            // hash so that we use the same color for the entire state.
+            entity = entities[i];
+            name = entity.name;
+            id = entity.id;
+
+
+            // entity modification code in here
+
+        }
+
+        // Update all entities - does not update dynamic entities changes
+        // dataSourceDisplay.update(new Cesium.JulianDate());
+
+        // Update all entities - Updates on any entity dynamic changes
+        viewer.clock.onTick.addEventListener(function(clock) {
+            dataSourceDisplay.update(clock.currentTime);
+
+        });
+
+
+
+    }).otherwise(function(error){
+
+        //Display any errrors encountered while loading.
+        console.error("Error: ", error);
+        app.log("Error: " + JSON.stringify(error));
+    });
+
+    /*
+     Mouse Events
+     */
+
+    // Mouse over handler
+    mouseHandler = viewer.screenSpaceEventHandler;
+
+    // On mouse move - highlight hover state
+    mouseHandler.setInputAction(function(movement) {
+
+        // If exists reset the last highlighted polygon (state)
+        if (highlightedEntity) {
+            highlightedEntity.color = pickedColor;
+            highlightedEntity = undefined;
+        }
+
+        // Pick the current polygon (state) according to the mouse position
+        var pickedObject = viewer.scene.pick(movement.endPosition);
+        if (pickedObject) {
+            if (Cesium.defined(pickedObject) && pickedObject.id instanceof Cesium.Entity) {
+
+                var attributes = pickedObject.primitive.getGeometryInstanceAttributes(pickedObject.id);
+                highlightedEntity = attributes;
+                pickedColor = attributes.color;
+                attributes.color = new Cesium.ColorGeometryInstanceAttribute.toValue(Cesium.Color.RED);
+            }
+        }
+    }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+
+
+    // On left click - Extrude the selected state
+    mouseHandler.setInputAction(function(movement) {
+
+        // Pick the current polygon (state) according to the mouse position
+        var positions, pickedObject = viewer.scene.pick(movement.position);
+
+        if (pickedObject) {
+
+            // modify the entity's polygon attributes
+            if (Cesium.defined(pickedObject) && pickedObject.id instanceof Cesium.Entity) {
+
+                // entity's polygon positions
+                positions = pickedObject.id.polygon.hierarchy['_value'].positions;
+
+                // Fly to the last entity element with nice distance
+                viewer.scene.camera.flyToBoundingSphere(Cesium.BoundingSphere.fromPoints(positions), {});
+
+                setTimeout(function() {
+                    app.log("[app] back to camera default position");
+                    console.log(defaultCameraPosition);
+                    viewer.camera.flyTo({
+                        destination : defaultCameraPosition
+
+                    });
+
+                }, 2000)
+
+            }
+        }
+
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+
+
+
+</script>
+</body>
+</html>
