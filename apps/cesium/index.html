@@ -17,25 +17,42 @@
             width: 100%;
         }
 
-        h3 {
+        h2 {
             font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
             color: #444;
+        }
+
+        h1, h3, h4 {
+            font-family: Helvetica, Verdana, sans-serif;
+            color: #444;
+            font-weight: normal;
         }
 
         li img {
             float: left;
             margin: 0 15px 0 0;
+            width: 130px;
+            height: 130px;
         }
 
         li p {
-            font: 200 12px/1.5 Georgia, Times New Roman, serif;
+            font: 200 16px/1.5 Georgia, Tahoma, serif;
             color: gray;
+            width: 80%;
         }
 
         li {
             padding: 10px;
             overflow: auto;
             border-bottom: 1px solid #efefef;
+            opacity: 0;
+
+
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
         }
 
         li:hover {
@@ -45,20 +62,124 @@
         a {
             text-decoration: none !important;
         }
+
+
     </style>
+
+    <script>
+
+        function getNode(image, path, title, desc) {
+
+            var id;
+
+            generateid ++;
+            id = "_listitem" + generateid ;
+
+            return  {
+                id: id,
+                html: "<li id=\"" + id + "\">" +
+                        "<image border=\"0\" src=\"images/docs/" + image + ".png\" />" +
+                        "<a href=\"http://lastboy.github.io/apps/cesium/examples/" + path + "\" target=\"_new\">" +
+                        "<h2>" + title + "</h2>" +
+                        "<p>" + desc + "</p></a>" +
+                    "</li>"};
+        }
+
+    </script>
 </head>
 
 <body>
-<h1>Cesium Examples</h1>
-<div id="list1">
-<ul>
-    <li>
-        <a href="http://cesium.demos.github.io/examples/fly/index.html" target="_new"><h3>FlyTo</h3>
-        <p>Loading US Topo JSON states with flyto example</p></a>
-    </li>
+<a href="https://github.com/lastboy/lastboy.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 
+
+<h1>Cesium Examples</h1>
+<h4>You can explore the code </h4>
+<div id="list1">
+<ul id="listcontent">
 
 </ul>
+
+    <script>
+        var list = document.querySelector("#listcontent"),
+                delay = 0,
+                generateid = 0,
+                data = [
+                    {
+                        image: "details",
+                        path: "details/index.html",
+                        title: "Details",
+                        desc: "Putting some details on the globe according to locations and camera zoom & Focus the camera on a certain location according to the mouse click on data point"
+                    },
+                    {
+                        image: "details.states",
+                        path: "details/states.html",
+                        title: "US States Detail",
+                        desc: "Putting some details on the states area according to its position"
+                    },
+                    {
+                        image: "flyto",
+                        path: "fly/index.html",
+                        title: "Fly To",
+                        desc: " Fly To a state"
+                    },
+                    {
+                        image: "label",
+                        path: "label/index.html",
+                        title: "Labels",
+                        desc: "Adding labels to the data source according to its position (State Position)"
+                    },
+                    {
+                        image: "label.material",
+                        path: "label/material.html",
+                        title: "Labels Material",
+                        desc: "Adding labels as material entities to the data source according to its position (State Position)"
+                    },
+                    {
+                        image: "layer",
+                        path: "layer/index.html",
+                        title: "Layers",
+                        desc: "Adding a layer on top of the base world map using open street provider"
+                    },
+                    {
+                        image: "mouse",
+                        path: "mouse/index.html",
+                        title: "Mouse Events",
+                        desc: "Mouse events demo over the globe countries polygons "
+                    },
+                    {
+                        image: "spin",
+                        path: "spin/index.html",
+                        title: "Spin",
+                        desc: "Spin the globe "
+                    },
+                    {
+                        image: "topo",
+                        path: "topo/index.html",
+                        title: "Topo JSON",
+                        desc: "Loading a world map from a given topo json file"
+                    }
+                ];
+
+        data.forEach(function(item) {
+
+
+            setTimeout(function() {
+                var node = getNode(item.image, item.path, item.title, item.desc),
+                        elt;
+
+                list.innerHTML += node.html;
+                elt = document.querySelector("#" + node.id);
+
+                setTimeout(function() {
+                    elt.style.opacity = 1;
+                }, 100);
+
+            }, delay);
+
+            delay += 500;
+        });
+
+    </script>
 </div>
 </body>
 </html>
